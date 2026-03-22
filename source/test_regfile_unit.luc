@@ -122,7 +122,7 @@ testbench test_regfile_unit {
         rb = 5d30
         rc = 5d0
         $tick_clock()
-        $assert(regfile_unit.rd1 == 0) 
+        $assert(regfile_unit.rd1 == 0)
         $assert(regfile_unit.rd2 == 0)
         $assert(regfile_unit.mwd == 0)
         $assert(regfile_unit.z == 1)
