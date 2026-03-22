@@ -108,13 +108,13 @@ module control_unit (
     // Task 10
     // PCSEL for BNE/BEQ
     // Check of OPCODE == BEQ, and branch (PCSEL: 001) if z == 1
-    if (opcode == 6h1D & z) {
-            pcsel = b001
-        }
-    // Check of OPCODE == BNE, and branch (PCSEL: 001) if z != 1
-    if (opcode == 6h1E & ~z) {
-            pcsel = b001
-        }
+    if ((opcode == 6h1D) & z) {
+        pcsel = b001;
+    }
+    
+    if ((opcode == 6h1E) & ~z) {
+        pcsel = b001;
+    }
 
     // Task 11
     // IRQ handling
